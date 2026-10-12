@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-12",
+  "income_2025": {
+    "year": 2025,
+    "population": "全国居民（包括非就业者）",
+    "median_disposable_per_capita": 36231,
+    "mean_disposable_per_capita": 43377,
+    "urban_median_disposable_per_capita": 51115,
+    "rural_median_disposable_per_capita": 20711,
+    "unit": "元/人·年",
+    "source": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962321.html"
+  },
+  "wages_2025": {
+    "year": 2025,
+    "population": "城镇法人单位受雇就业人员，不含个体工商户、自由职业者",
+    "private_mean_gross": 71590,
+    "nonprivate_mean_gross": 129441,
+    "unit": "元/就业人员·年（税前平均数）",
+    "illustration_work_hours_per_week": 40,
+    "illustration_weeks_per_year": 52,
+    "source": "https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html"
+  },
+  "timeuse_2024": {
+    "year": 2024,
+    "population": "第三次全国时间利用调查6周岁及以上居民，按一周七天统计的居民每日平均数",
+    "discretionary_minutes_per_day": 204,
+    "unit": "分钟/人·日",
+    "source": "https://www.stats.gov.cn/zt_18555/zthd/lhfw/2025/2025_qgsjlydc/202501/t20250127_1958535.html"
+  }
+}

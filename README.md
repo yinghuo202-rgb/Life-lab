@@ -11,17 +11,6 @@
 
 > 如果在线链接显示 404，请先查看 [Pages 发布状态](https://github.com/yinghuo202-rgb/Life-lab/actions/workflows/pages.yml)，并确认仓库设置中 Pages 的构建来源为 **GitHub Actions**。发布完成前可下载并直接打开 `index.html`。
 
-## 体验界面
-
-![桌面端的决策实验室](docs/screenshots/desktop.png)
-
-<details>
-<summary>查看手机端交互效果</summary>
-
-<img src="docs/screenshots/mobile.png" alt="手机端的决策实验室" width="390" />
-
-</details>
-
 ## 怎样使用
 
 1. **选择案例**：从通勤、工作、理财习惯、睡眠等 9 个日常情境里选一个。
@@ -70,9 +59,9 @@ python tests/pages_check.py
 
 ## 发布与维护
 
-在 GitHub 仓库 **Settings → Pages** 中，把 **Build and deployment → Source** 设置为 **GitHub Actions**。仓库内的 [Pages 自动发布工作流](.github/workflows/pages.yml) 会在每次推送到 `main` 后执行模型测试、构建并发布。部署状态可在 [Actions](https://github.com/yinghuo202-rgb/Life-lab/actions) 查看。
+自动发布配置已提交至 [Pages 工作流](.github/workflows/pages.yml)。**首次发布需要仓库管理员在 [Settings → Pages](https://github.com/yinghuo202-rgb/Life-lab/settings/pages) 将 Source 设为 GitHub Actions**。启用后重新运行 [Publish Life Lab](https://github.com/yinghuo202-rgb/Life-lab/actions/workflows/pages.yml) 即可。首次构建若提示 “Get Pages site failed / Not Found”，意味着 Pages 尚未启用，而不是模型测试失败。
 
-正式网站地址应为：**https://yinghuo202-rgb.github.io/Life-lab/**（以 Actions 部署成功为准）。
+发布成功后网站地址为：https://yinghuo202-rgb.github.io/Life-lab/ 。提交后自动运行构建与发布；部署是否成功以 Actions 的 deploy 任务和网站访问结果为准。
 
 ## 引用与致谢
 

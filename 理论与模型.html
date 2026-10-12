@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>理论与模型｜高性价比人生</title><meta name="theme-color" content="#f7f8f6">
+<style>
+:root{--ink:#162e27;--muted:#60786a;--green:#176a54;--line:#dfe8df}*{box-sizing:border-box}body{margin:0;background:#f7f8f6;color:var(--ink);font:15px/1.92 Inter,'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--green)}header{height:67px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(25px,calc((100vw - 1080px)/2));font-size:13px}header a{text-decoration:none;font-weight:730}header span{color:#849388}main{max-width:1100px;margin:auto;padding:45px 25px 90px;display:grid;grid-template-columns:205px minmax(0,1fr);gap:65px}.toc{position:sticky;top:30px;align-self:start;border-right:1px solid var(--line);padding-right:25px}.toc h2{font-size:11px;letter-spacing:.14em;color:#8da597;margin:0 0 18px}.toc a{display:block;font-size:12px;color:#6c8174;text-decoration:none;margin:11px 0}.toc a:hover{color:var(--green)}article{max-width:780px;min-width:0}.kicker{font-size:11px;color:var(--green);font-weight:750;letter-spacing:.13em;margin:0 0 15px}h1{font-size:46px;letter-spacing:-.05em;line-height:1.25;margin:0 0 20px}h2{font-size:27px;letter-spacing:-.03em;margin:57px 0 15px;line-height:1.4;border-top:1px solid var(--line);padding-top:26px;scroll-margin-top:25px}h3{font-size:18px;margin:29px 0 10px}p{margin:13px 0;color:#3f564b}strong{color:#193f33}.lead{font-size:17px;line-height:1.95;color:#536f5e}.banner{background:#ebf3ec;border-left:3px solid #3e9b7a;border-radius:7px;padding:18px 21px;margin:25px 0;color:#315f4a}.eq{font:600 23px/1.6 Georgia,'Noto Serif SC',serif;background:#eff4ef;border:1px solid #e0e8df;padding:15px 18px;border-radius:10px;margin:18px 0;overflow-wrap:anywhere}.small{font-size:12px;color:#748578}.table-scroll{overflow-x:auto;margin:18px 0}table{width:100%;border-collapse:collapse;font-size:12px;min-width:560px}th,td{border-bottom:1px solid #e1e8df;padding:12px 12px 12px 0;text-align:left;vertical-align:top;line-height:1.7}th{font-weight:730;background:#eff3ef;padding-left:10px}td:first-child{font-weight:650;color:#285041;padding-left:10px}ul{padding-left:20px;color:#476152}li{margin:8px 0}.source{font-size:12px;color:#617669}.source a{word-break:break-word}footer{margin-top:65px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:#789185}footer a{margin-right:15px}details{margin:14px 0;border:1px solid var(--line);border-radius:9px;padding:0 17px}summary{cursor:pointer;font-weight:680;padding:13px 0}details p{font-size:12px}.method-box{background:#fff;border:1px solid var(--line);padding:17px;border-radius:11px;margin-top:15px}a:focus-visible,summary:focus-visible{outline:3px solid #70b69b;outline-offset:3px}@media(max-width:850px){main{grid-template-columns:1fr;gap:10px;padding:35px 20px 65px}.toc{position:static;border:0;background:#edf3ed;border-radius:10px;padding:15px}.toc h2{margin-bottom:8px}.toc a{display:inline-block;margin:5px 13px 5px 0}h1{font-size:36px}h2{font-size:24px}}@media(max-width:480px){header{padding:0 16px}header span{font-size:10px}main{padding:30px 16px 50px}h1{font-size:32px}h2{font-size:22px}.eq{font-size:19px}}
+</style></head><body>
+<header><a href="index.html">← 返回决策实验室</a><span>THEORY & METHODS / 独立理论页</span></header>
+<main><nav class="toc" aria-label="本页目录"><h2>CONTENTS</h2><a href="#concept">01 概念与硬约束</a><a href="#formula">02 LVI 八维模型</a><a href="#scoring">03 评分怎么计算</a><a href="#examples">04 原报告案例核算</a><a href="#interaction">05 交互滑杆如何联动</a><a href="#robust">06 如何判断稳健性</a><a href="#stats">07 官方数据使用口径</a><a href="#boundaries">08 方法局限与资料</a></nav>
+<article>
+<p class="kicker">高性价比人生 · 研究方法</p><h1>为什么这样计算性价比？</h1>
+<p class="lead">这里的“性价比”不是把人生所有事情折算成人民币，而是在同一人物、同一时间范围内，对比不同选择的资源得失。它是一种可解释的决策演示，不是经过验证的预测量表。</p>
+<div class="banner"><strong>先用事实算成本，再用假设比较价值。</strong> 金额与工时可按输入直接折算；心理、健康、职业资本等无法仅从几个滑杆精确预测，因此必须公开评分假设。</div>
+
+<h2 id="concept">01 · 概念与硬约束</h2>
+<p>原报告将“性价比人生”定义为：在法律、基本健康、基本财务安全和核心照护责任等硬约束不被突破的前提下，把有限的时间、金钱、注意力、体力和机会成本配置到能够持续提升健康、心理幸福感、职业资本、关系质量及抗风险能力的事项上，最大化长期净效用。</p>
+<p>因此，分数再高的方案，只要显著损害基本健康、导致无法支付必要生活费用、违反法律或无法履行关键照护责任，都不能凭其他得分来抵消。首页没有采集足够信息来自动判断这些底线，所以显示的是<strong>条件性的方案比较</strong>，不是个人行动建议。</p>
+
+<h2 id="formula">02 · LVI：八个目标同时比较</h2>
+<p>原报告采用多准则决策分析（MCDA）的线性加权框架：八项维度各打0–100分，按权重计算加权平均，再将方案得分减去当前状态得分。</p>
+<div class="eq">LVI = ∑( wᵢ × Sᵢ ) / 100</div>
+<div class="eq">ΔLVI = LVI（调整方案）− LVI（当前状态）</div>
+<p>这里的 <strong>wᵢ</strong> 是百分比权重，合计100%；<strong>Sᵢ</strong> 是该维度的情景评分，越高代表该维度的配置越好。ΔLVI 为正，仅表示当前权重和评分假设下方案的综合得分更高。</p>
+<div class="table-scroll"><table><thead><tr><th>维度</th><th>默认权重</th><th>代表什么</th><th>评分局限</th></tr></thead><tbody>
+<tr><td>时间</td><td>15%</td><td>自主支配时间、碎片化、通勤和工时负担</td><td>小时数量不等于时间质量</td></tr>
+<tr><td>金钱</td><td>15%</td><td>必要支出、现金流压力和新增成本</td><td>需要个人现金约束</td></tr>
+<tr><td>心理</td><td>15%</td><td>主观幸福感、压力和恢复</td><td>不可按金额直接推导</td></tr>
+<tr><td>健康</td><td>20%</td><td>睡眠、身体活动与身体风险</td><td>不替代医疗评估</td></tr>
+<tr><td>职业</td><td>10%</td><td>技能积累、市场性和可选择性</td><td>未来回报不确定</td></tr>
+<tr><td>关系</td><td>10%</td><td>家庭陪伴、照护与支持网络</td><td>时间不等于关系质量</td></tr>
+<tr><td>风险</td><td>10%</td><td>现金缓冲、债务、收入集中与可逆性</td><td>平均评分不能覆盖灾难性尾部风险</td></tr>
+<tr><td>可持续</td><td>5%</td><td>方案能否长期执行和维护</td><td>执行率应复盘验证</td></tr>
+</tbody></table></div>
+<p class="small">权重源于原报告的默认设计，不是全国人群价值偏好的实测分布。三个原始案例使用原报告分别为其设定的人群权重；新增案例采用上述默认权重。</p>
+
+<h2 id="scoring">03 · 维度分数怎么得到？</h2>
+<p>原报告建议先为各个指标设置个体化的较差参考点 L 和较好参考点 U，再换算到0–100分：</p>
+<div class="eq">正向指标 = 100 × clamp[(x−L)/(U−L), 0, 1]</div>
+<div class="eq">成本指标 = 100 × clamp[(U−x)/(U−L), 0, 1]</div>
+<p>这些参考点不是全国统一健康线或收入达标线。八个维度内可以综合多个指标；不同维度之间必须避免把同一收益完整重复计分。</p>
+<p>研究原文中的案例已经直接给出了八维基线和方案评分，<strong>这些分数是研究者构造的情景值，不是从实际参与者的追踪数据测得</strong>。本网站原样使用它们作为三例默认设定，再公开说明滑杆变化的假设规则。</p>
+
+<h2 id="examples">04 · 原始研究案例的可复算结果</h2>
+<div class="table-scroll"><table><thead><tr><th>情景</th><th>原有 LVI</th><th>方案 LVI</th><th>ΔLVI</th><th>对应权重</th></tr></thead><tbody>
+<tr><td>搬家换通勤</td><td>58.54</td><td>66.94</td><td>+8.40</td><td>单身青年</td></tr>
+<tr><td>直接晋升</td><td>72.52</td><td>57.57</td><td>−14.95</td><td>已婚有孩中年</td></tr>
+<tr><td>协商晋升</td><td>72.52</td><td>73.50</td><td>+0.98</td><td>已婚有孩中年</td></tr>
+<tr><td>自由职业完整优化</td><td>52.12</td><td>70.06</td><td>+17.94</td><td>自由职业者</td></tr>
+</tbody></table></div>
+<p>上述数值用原始维度分数和对应权重重新核算一致。自由职业完整优化包括客户组合、现金缓冲、定价和工作安排等多项措施；因此首页仅调整客户占比及工时时，<strong>不会把17.94的全部改善计入局部方案</strong>。</p>
+
+<h2 id="interaction">05 · 改动两个滑杆，为什么得分会变化？</h2>
+<p>为了让访客免填问卷也能探索取舍，本站以原报告的目标评分为锚点，为调整后的方案定义简单、透明的响应系数。<strong>这些系数是教学敏感性假设，不是经实验估计的因果参数。</strong></p>
+<div class="table-scroll"><table><thead><tr><th>案例</th><th>事实层计算</th><th>综合评分的情景假设</th></tr></thead><tbody>
+<tr><td>搬家</td><td>新增年租金 = 月增租×12；年节省通勤 = 周节省×52</td><td>节省5小时/周、月增租1200元、75%可自主使用时，锚定原报告评分。时间维度随小时数变化，金钱和风险随房租变化；心理健康等仅按自主时间假设调整。</td></tr>
+<tr><td>晋升</td><td>边际税后小时报酬 = 年增收入÷年增工时</td><td>直接/协商两种方案各有原始评分锚点。按新增薪资修正金钱/职业分，按工时修正时间、健康、关系等；协商的出差与弹性安排作为独立的方案假设。</td></tr>
+<tr><td>自由职业</td><td>客户收入敞口规模 = 月收入×最大客户占比</td><td>工作时间影响时间分；集中度影响风险分；其他维度只加入原文完整方案中的部分改善假设，不计未调整的现金缓冲与保障收益。</td></tr>
+<tr><td>家务外包</td><td>服务支出÷释放家务小时</td><td>时间收益、金钱成本及休息/关系改善系数均为新增假设，不是外包效果的测量结果。</td></tr>
+<tr><td>缩短工作周</td><td>减少的税后工资÷释放的工作小时</td><td>将时间、健康与心理的潜在改善和收入、职业机会成本放入同一加权比较；这些变化为新增假设。</td></tr>
+<tr><td>进修</td><td>学费÷12周学习小时</td><td>职业收益不能按学习小时预测。页面要求在“未实现、部分实现、达到预期”三种职业收益假设之间切换，观察结论变化。</td></tr>
+<tr><td>关闭自动续费</td><td>年度取消订阅费=月减少费用×12；另计每月核对时间</td><td>金钱维度按省下的订阅费调整；时间、可持续维度考虑检查成本。系数均为本站教学设定。</td></tr>
+<tr><td>减少低效会议</td><td>每周净节省=会议减少小时−新增异步协作小时</td><td>时间等维度仅按净节省时间作线性敏感性演示；不宣称提高生产率。</td></tr>
+<tr><td>优先保证睡眠</td><td>每周新增睡眠=每晚新增小时×每周执行晚数</td><td>用时间再分配解释健康与心理的可能取舍；健康得分不是医疗预测。</td></tr>
+</tbody></table></div>
+<div class="method-box"><strong>新增选题与原指南的关系</strong><p>新增三例对应 <a href="https://github.com/eternity4719/HowToLiveBetter/blob/main/book/05-不要浪费钱.md" target="_blank" rel="noopener noreferrer">第5节第1条：关闭自动续费</a>、<a href="https://github.com/eternity4719/HowToLiveBetter/blob/main/book/04-不要浪费时间.md" target="_blank" rel="noopener noreferrer">第4节第6条：减少低效会议</a>和<a href="https://github.com/eternity4719/HowToLiveBetter/blob/main/book/03-不要浪费精力.md" target="_blank" rel="noopener noreferrer">第3节第3条：保证睡眠</a>。选题参照原指南，人物基线、模拟数值、八维分数及联动系数均由本站重新编制，不是原指南作者给出的计算结果。指南采用 CC BY 4.0 许可；本项目附上明确来源与改编声明。</p></div>
+<div class="method-box"><strong>具体可检查的计算例子：搬家</strong><p>原报告时间分由48→76、金钱分由72→62。如果只改为每周省2.5小时、房租仍增加1200元，并沿用本站线性教学假设，则时间分变为48 + (76−48)×2.5/5 = 62；金钱分仍为62。其余维度按页面公开的用途比例及系数变化。最后用该案例八维权重重新计算LVI和ΔLVI。</p></div>
+<details><summary>展开：三组偏好如何改变权重？</summary><p>“案例默认”使用研究原文对应人群的权重；“更重现金”把金钱维度乘1.8、风险乘1.35、时间乘0.85后再归一化；“更重时间”把时间乘1.7、心理乘1.2、健康乘1.15、金钱乘0.65后再归一化。其他维度系数见源码中的 <code>weightFor</code>。这些是演示预设，而不是由访客的真实偏好调查推导。权重变化后，基线与方案都在同一权重下重算。</p></details>
+<details><summary>展开：为什么不显示一个“全国统一性价比排名”？</summary><p>不同方案使用不同人群基线和主观评分区间。跨案例直接比较一个青年搬家的ΔLVI与一个中年人晋升的ΔLVI，不具有充分的共同度量基础。网站只比较同一案例、同一权重下的前后差异；不对所有九种决策做全国排名。</p></details>
+
+<h2 id="robust">06 · 稳健性与反向结论</h2>
+<p>线性加权模型能清楚地显示代价与收益，但也很容易因为权重、评分参考点和因果假设发生排名翻转。页面的三组偏好是一个入门敏感性实验：同一方案用不同权重重新计算，若正负号翻转，说明不存在无条件更优的方案。</p>
+<p>即使三组演示权重都得出同向结果，也不代表结论已经通过完整稳健性检验。真实重大决策还应检查评分上下界、收入不确定性、外部条件变化、法律与健康硬约束，以及是否能用2–8周的低成本试验验证。</p>
+<p>英国政府的多准则决策指南指出，简单的线性加权价值模型需要满足包括偏好独立性在内的条件，且必须检验评分和权重改变后的方案排序。人生中的健康、收入、时间和家庭关系可能彼此影响，因此本网页只使用线性模型做透明的教育演示，而不声称形成了经过效度验证的量表。</p>
+<p class="source">方法参考：<a href="https://analysisfunction.civilservice.gov.uk/policy-store/an-introductory-guide-to-mcda/" target="_blank" rel="noopener noreferrer">UK Government Analysis Function：Introductory Guide to MCDA</a>；<a href="https://www.gov.uk/government/publications/green-book-supplementary-guidance-use-of-multi-criteria-decision-analysis/use-of-multi-criteria-decision-analysis-in-options-appraisal-of-economic-cases" target="_blank" rel="noopener noreferrer">GOV.UK：Sensitivity analysis in MCDA</a>。</p>
+
+<h2 id="stats">07 · 国家统计数据的正确角色</h2>
+<p>统计参照帮助理解数量级，但不能直接决定八维评分，也不能把居民平均收入折算为所有人的休息小时价值。</p>
+<div class="table-scroll"><table><thead><tr><th>指标</th><th>最新采用数据</th><th>统计总体与用途</th></tr></thead><tbody>
+<tr><td>居民人均可支配收入中位数</td><td>2025年，36,231元/年</td><td>全国居民，包含非就业者；不是个人年薪</td></tr>
+<tr><td>城镇私营单位就业人员平均工资</td><td>2025年，71,590元/年</td><td>特定受雇就业人员，税前均值，不涵盖全部就业形态</td></tr>
+<tr><td>个人自由支配活动</td><td>2024年，3小时24分钟/日</td><td>第三次全国时间利用调查，6岁及以上居民，一周七天口径；不等于睡眠休息</td></tr>
+</tbody></table></div>
+<p>按“工资年平均数÷每周40小时÷52周”可以演示劳动报酬的小时折算，但这是人为统一的假设工时，<strong>不是统计局发布的全国平均时薪</strong>。休息时间的价值更不能拿这一数值直接替代。买回时间的现金成本可直接核算，而休息的主观价值只能作为个人偏好或保本门槛讨论。</p>
+<p class="source">官方原始出处：<a href="https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962321.html" target="_blank" rel="noopener noreferrer">2025居民收入</a> · <a href="https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html" target="_blank" rel="noopener noreferrer">2025城镇单位工资</a> · <a href="https://www.stats.gov.cn/zt_18555/zthd/lhfw/2025/2025_qgsjlydc/202501/t20250127_1958535.html" target="_blank" rel="noopener noreferrer">第三次全国时间利用调查公报</a>。</p>
+
+<h2 id="boundaries">08 · 使用边界与原始研究</h2>
+<ul><li>本网站的0–100分不是已经通过心理测量效度检验的“人生幸福量表”。</li><li>原报告三个案例的分数是情景目标；新增六个案例的基线和变化全部是网站的教学假设。</li><li>更多休息时间可能有价值，但并非每一小时都等值；时间品质、健康、照护和实际执行都会影响结果。</li><li>计算器没有掌握个人必要支出、疾病风险、劳动合同、家庭义务等细节，不能自动出具投资、医疗、就业或法律建议。</li><li>对于接近零的评分差额，应关注假设的稳定性，而不是解读小数点。</li></ul>
+<p>如需核对全部原始定义、维度内评分表、人群权重和文献讨论，可阅读原始报告全文；完整 Markdown 随源码包提供，未经删改。</p>
+<footer><a href="index.html">← 回到交互实验</a><a href="研究全文.html">阅读原始研究全文 ↗</a></footer>
+</article></main></body></html>

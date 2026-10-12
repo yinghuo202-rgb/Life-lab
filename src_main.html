@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <meta name="description" content="选一个真实生活中的假设决策，调整两个参数，立刻看到基于八维LVI模型的性价比变化。">
+  <title>高性价比人生 · 决策实验室</title>
+  <style>/*V4_STYLES*/</style>
+</head>
+<body>
+  <a class="skip" href="#lab">跳转到实验室</a>
+  <header class="header">
+    <a class="wordmark" href="#top" aria-label="高性价比人生，返回首页"><span class="logo">V<span>·</span></span><span>高性价比人生</span><small>互动研究</small></a>
+    <nav aria-label="主导航"><a href="#lab">体验案例</a><a href="理论与模型.html">理论与模型 ↗</a><a href="研究全文.html" class="wide-only">研究原文 ↗</a></nav>
+  </header>
+  <main id="top">
+    <section class="intro wrap">
+      <p class="eyebrow">DECISION LAB · 互动研究</p>
+      <h1>你的选择，<em>真的划算吗？</em></h1>
+      <p class="lead">不只看花多少钱、赚多少钱。选一个案例，改变条件，看看八维人生资源配置如何变化。</p>
+      <div class="intro-bottom"><a href="#lab" class="start">开始比较 <span aria-hidden="true">↗</span></a><span>零输入 · 9个假设案例 · 即时反馈</span></div>
+    </section>
+
+    <section class="wrap lab" id="lab" aria-label="决策实验室">
+      <div class="section-caption"><span class="section-number">01</span><div><h2>先试一个决定</h2><p>只需调两个参数。每次都和同一个人物的原状相比。</p></div></div>
+      <div class="case-list" role="tablist" aria-label="选择生活决策情景" id="case-list">
+        <button type="button" role="tab" data-id="commute" id="tab-commute" aria-selected="true" aria-controls="lab-panel"><span class="case-icon">⌂</span><span>搬家换时间</span></button>
+        <button type="button" role="tab" data-id="promotion" id="tab-promotion" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">↗</span><span>升职加薪</span></button>
+        <button type="button" role="tab" data-id="freelance" id="tab-freelance" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">⊞</span><span>自由职业</span></button>
+        <button type="button" role="tab" data-id="chores" id="tab-chores" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">⌁</span><span>家务外包</span></button>
+        <button type="button" role="tab" data-id="fourday" id="tab-fourday" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">◷</span><span>缩短工作周</span></button>
+        <button type="button" role="tab" data-id="learning" id="tab-learning" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">✳</span><span>进修投入</span></button>
+        <button type="button" role="tab" data-id="subscriptions" id="tab-subscriptions" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">◎</span><span>关闭自动续费</span></button>
+        <button type="button" role="tab" data-id="meetings" id="tab-meetings" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">▦</span><span>减少低效会议</span></button>
+        <button type="button" role="tab" data-id="sleep" id="tab-sleep" aria-selected="false" aria-controls="lab-panel" tabindex="-1"><span class="case-icon">☾</span><span>优先保证睡眠</span></button>
+      </div>
+      <p class="case-swipe-hint">左右滑动查看更多案例 →</p>
+      <div class="main-panel" id="lab-panel" role="tabpanel" aria-labelledby="tab-commute" tabindex="0">
+        <div class="settings">
+          <div class="case-top"><span id="origin">原报告假设</span><span>模拟条件 · 非个人评估</span></div>
+          <h3 id="case-title">搬近公司，值得多付房租吗？</h3>
+          <p id="case-about">27岁，月税后收入11,500元；每周通勤8.3小时。</p>
+          <a id="case-source" class="case-source" href="#" hidden target="_blank" rel="noopener noreferrer">原指南条目 ↗</a>
+          <div class="controls" id="controls"></div>
+          <div class="context-buttons" id="promotion-options" hidden role="group" aria-label="晋升方式">
+            <span>方案方式</span><button type="button" data-preset="direct" aria-pressed="true">直接晋升</button><button type="button" data-preset="negotiated" aria-pressed="false">协商晋升</button>
+          </div>
+          <div class="context-buttons" id="learning-options" hidden role="group" aria-label="学习职业收益的假设">
+            <span>职业收益假设</span><button type="button" data-outcome="low" aria-pressed="false">未实现</button><button type="button" data-outcome="medium" aria-pressed="true">部分实现</button><button type="button" data-outcome="high" aria-pressed="false">达到预期</button>
+          </div>
+          <div class="context-buttons" id="conversion-options" hidden role="group" aria-label="新增时间可自主支配的比例">
+            <span>真正可自主使用的时间</span><button type="button" data-pct="50">50%</button><button type="button" data-pct="75" aria-pressed="true">75%</button><button type="button" data-pct="100">100%</button>
+          </div>
+          <button class="reset" id="reset" type="button">↺ 恢复此案例</button>
+        </div>
+        <div class="outcome">
+          <div class="panel-header"><span>基线 vs 调整方案</span><span class="signal"><i></i> 实时计算</span></div>
+          <div class="comparisons" id="comparisons"></div>
+          <div class="score-block">
+            <div class="score-caption"><strong>综合性价比变化</strong><span>ΔLVI · 八维加权得分</span></div>
+            <div class="score-line"><strong id="delta" class="delta positive">+8.40</strong><span id="verdict" class="verdict">情景下有改善</span></div>
+            <div class="score-bars" id="score-bars"></div>
+            <p class="score-meta">评分根据原文模型和明确的情景假设计算，不是对真实未来的预测。</p>
+          </div>
+          <div class="preference-line">
+            <span>换一种偏好</span>
+            <div role="group" aria-label="比较三种价值偏好" class="preference-buttons">
+              <button type="button" data-priority="money" aria-pressed="false">更重现金</button>
+              <button type="button" data-priority="default" aria-pressed="true">案例默认</button>
+              <button type="button" data-priority="time" aria-pressed="false">更重时间</button>
+            </div>
+          </div>
+          <div class="economics"><div><span id="cost-label">买回通勤时间</span><strong id="cost-value">¥55.4/小时</strong></div><div><span id="second-label">买回自主时间</span><strong id="second-value">¥73.8/小时</strong></div></div>
+          <p class="interpret" id="interpret">这次取舍最重要的变化是时间与现金的交换。</p>
+          <details class="details"><summary>八维得分怎么算的？ <span>展开计算明细</span></summary><div id="contributions"></div><p class="method-note" id="assumption-note"></p><a class="inner-link" href="理论与模型.html">查看完整方法、评分假设与局限 ↗</a></details>
+        </div>
+      </div>
+      <p class="lab-foot">原报告3例保留原文评分；其余案例为明确标注的教学假设，部分选题改编自《高性价比人生指南》。对高风险选择，先检查法律、健康、财务与照护底线。</p>
+    </section>
+
+    <section class="wrap bottom-row" aria-label="统计参照和研究方法">
+      <div class="stat-reference" id="stats">
+        <div class="section-caption small"><span class="section-number">02</span><div><h2>把数字放到现实里</h2><p>国家统计局数据提供量级参照，不给个人选择打分。</p></div></div>
+        <div class="stat-columns">
+          <div><small>居民年可支配收入中位数 · 2025</small><strong id="stat-income">¥36,231</strong><span>全国居民，含非就业者</span></div>
+          <div><small>城镇私营单位平均工资 · 2025</small><strong id="stat-wage">¥71,590</strong><span>受雇就业人员，税前，非全国时薪</span></div>
+          <div><small>居民每日自由支配活动 · 2024</small><strong id="stat-time">3小时24分</strong><span>6岁及以上居民，不等于睡眠</span></div>
+        </div>
+        <details class="details slim"><summary>指标口径与来源 <span>展开</span></summary><p>居民收入与城镇单位税前工资统计对象不同；年度工资除以假设工时只能得到折算参考，不能称为官方“休息时薪”。自由支配时间包含个人自由安排活动，不等于睡眠或可售卖的劳动小时。<a id="source-income" href="#" target="_blank" rel="noopener noreferrer">收入来源 ↗</a> · <a id="source-wage" href="#" target="_blank" rel="noopener noreferrer">工资来源 ↗</a> · <a id="source-time" href="#" target="_blank" rel="noopener noreferrer">时间来源 ↗</a></p></details>
+      </div>
+      <div class="theory-teaser">
+        <div class="section-caption small"><span class="section-number">03</span><div><h2>为什么这样算？</h2></div></div>
+        <p>先守住底线，再把时间、金钱、健康、关系、职业与风险放在一起比较。</p>
+        <a class="theory-link" href="理论与模型.html">阅读独立理论页 <span aria-hidden="true">↗</span></a>
+        <p class="theory-mini">LVI公式、八维打分、假设系数、权重敏感性及参考文献集中在理论页。</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>高性价比人生 · Interactive Edition V5 · <a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">选题参考《高性价比人生指南》</a></span><nav><a href="理论与模型.html">理论与模型</a><a href="研究全文.html">原始研究全文</a></nav></div></footer>
+  <script id="stats-data" type="application/json">/*V4_STATS*/</script>
+  <script>/*V4_MODEL*/</script>
+  <script>/*V4_APP*/</script>
+</body>
+</html>
